@@ -7,6 +7,7 @@ function nowServing(curLine){
   if(curLine.length === 0) {
     return "There is nobody waiting to be served!";
   }
+<<<<<<< HEAD
   let curPerson = curLine.shift();
   return `Currently serving ${curPerson}.`;
 }
@@ -21,6 +22,16 @@ function currentLine(curLine){
      newString += `${i + 1}. ${curLine[i]}, `
    }
    
+=======
+  return curLine.shift();
+}
+
+function currentLine(curline){
+  if(curLine.length  === 0) return "The line is currently empty.";
+  let newString = "The line is currently:  ";
+  for(let i = 0; i < curLine.length; i++){
+   newString += `  ${i+1}.  ${curLine[i]}`; 
+>>>>>>> c2a7066c5eaaabfb8ff8082fa577915cb027df0a
   }
   return newString
 }
